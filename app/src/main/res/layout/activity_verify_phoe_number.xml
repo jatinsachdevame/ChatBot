@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login.VerifyPhoeNumberActivity"
+    android:background="@color/colorPrimaryLight"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:textSize="40sp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="Verification"
+        android:textAlignment="center"
+        android:textColor="#000"
+        android:fontFamily="@font/playfair_display"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/otp"
+        android:layout_marginBottom="70dp"
+        android:text="An OTP has been sent to the given number, it
+will be detect automatically but if it is not then you can add it manually too."
+        android:fontFamily="@font/playfair_display"
+        android:textSize="20dp"
+        android:textColor="#000"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:id="@+id/instruction"
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:layout_centerVertical="true"
+        android:id="@+id/otp"
+        >
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/et1"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/et2"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/et3"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/et4"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/et5"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/et6"
+            android:inputType="number"
+            android:gravity="center"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/otp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_background"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:text="verify"
+        android:fontFamily="@font/playfair_display"
+        />
+</RelativeLayout>
