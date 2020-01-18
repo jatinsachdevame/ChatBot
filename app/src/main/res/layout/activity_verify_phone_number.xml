@@ -26,6 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_above="@id/otp"
         android:layout_marginBottom="70dp"
+        android:visibility="gone"
         android:text="An OTP has been sent to the given number, it
 will be detect automatically but if it is not then you can add it manually too."
         android:fontFamily="@font/playfair_display"

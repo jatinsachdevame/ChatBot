@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.chatbot.MainActivity;
@@ -33,11 +34,14 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
     public Button verifyButton;
     private FirebaseAuth auth;
     private ProgressBar progressBar;
+    TextView instruction;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_phone_number);
+
+        instruction = findViewById(R.id.instruction);
 
         et1 = findViewById(R.id.et1);
         et2 = findViewById(R.id.et2);
@@ -117,8 +121,11 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
         @Override
         public void onCodeSent(String s, PhoneAuthProvider.ForceResendingToken forceResendingToken) {
             super.onCodeSent(s, forceResendingToken);
+            instruction.setVisibility(View.VISIBLE);
             codeSent = s;
         }
+
+
 
         @Override
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
@@ -140,6 +147,9 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 verifyCode(code);
             }
+
+            Intent intent = new Intent(VerifyPhoneNumberActivity.this, MainActivity.class);
+            startActivity(intent);
 
         }
 
