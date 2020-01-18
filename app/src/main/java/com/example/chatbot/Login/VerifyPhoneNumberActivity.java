@@ -146,10 +146,11 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
                 et6.setText(code6);
                 progressBar.setVisibility(View.VISIBLE);
                 verifyCode(code);
+            } else {
+                Intent intent = new Intent(VerifyPhoneNumberActivity.this, MainActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
             }
-
-            Intent intent = new Intent(VerifyPhoneNumberActivity.this, MainActivity.class);
-            startActivity(intent);
 
         }
 
