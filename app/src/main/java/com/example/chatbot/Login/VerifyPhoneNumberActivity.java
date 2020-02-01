@@ -14,7 +14,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.chatbot.MainActivity;
+import com.example.chatbot.ChatActivity;
 import com.example.chatbot.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -101,7 +101,7 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            Intent intent = new Intent(VerifyPhoneNumberActivity.this, MainActivity.class);
+                            Intent intent = new Intent(VerifyPhoneNumberActivity.this, ChatActivity.class);
                             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                             startActivity(intent);
                         } else {
@@ -147,7 +147,7 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
                 progressBar.setVisibility(View.VISIBLE);
                 verifyCode(code);
             } else {
-                Intent intent = new Intent(VerifyPhoneNumberActivity.this, MainActivity.class);
+                Intent intent = new Intent(VerifyPhoneNumberActivity.this, ChatActivity.class);
                 intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
                 startActivity(intent);
             }
@@ -164,7 +164,7 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
     protected void onStart() {
         super.onStart();
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
-            Intent intent = new Intent(VerifyPhoneNumberActivity.this, MainActivity.class);
+            Intent intent = new Intent(VerifyPhoneNumberActivity.this, ChatActivity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
             startActivity(intent);
         }

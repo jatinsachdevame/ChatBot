@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:key="DarkMode"
+        android:title="Dark Mode"
+        android:summary="Dark mode"
+        android:defaultValue="false"
+        />
+
+
+
+</PreferenceScreen>
