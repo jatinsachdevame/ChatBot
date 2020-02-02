@@ -2,8 +2,10 @@ package com.example.chatbot.Login;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.preference.PreferenceManager;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -35,11 +37,13 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
     private FirebaseAuth auth;
     private ProgressBar progressBar;
     TextView instruction;
+    SharedPreferences modeSharedPreference;
+    Boolean mode;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_verify_phone_number);
+        applyTheme();
 
         instruction = findViewById(R.id.instruction);
 
@@ -67,6 +71,23 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressbar);
 
+    }
+
+    private void applyTheme() {
+        mode = false;
+        modeSharedPreference = PreferenceManager.getDefaultSharedPreferences(this);
+        if (modeSharedPreference != null) {
+            mode = modeSharedPreference.getBoolean("mode", false);
+        }
+        if (mode) {
+            setTheme(R.style.Dark_Theme);
+            Toast.makeText(this, "Dark Theme Chat", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "Light Theme Chat", Toast.LENGTH_SHORT).show();
+            setTheme(R.style.AppTheme);
+        }
+
+        setContentView(R.layout.activity_verify_phone_number);
     }
 
     public void otpEntered(View view) {
@@ -130,7 +151,7 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
         @Override
         public void onVerificationCompleted(PhoneAuthCredential phoneAuthCredential) {
             String code = phoneAuthCredential.getSmsCode();
-            if (code != null) {
+            if (code != null) { 
                 String code1, code2, code3, code4, code5, code6;
                 code1 = code.substring(0,1);
                 code2 = code.substring(1,2);
@@ -238,4 +259,32 @@ public class VerifyPhoneNumberActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    protected void onResume() {
+        super.onResume();
+        applyTheme();
+        et1 = findViewById(R.id.et1);
+        et2 = findViewById(R.id.et2);
+        et3 = findViewById(R.id.et3);
+        et4 = findViewById(R.id.et4);
+        et5 = findViewById(R.id.et5);
+        et6 = findViewById(R.id.et6);
+
+        et1.addTextChangedListener(new GenericTextWatcher(et1));
+        et2.addTextChangedListener(new GenericTextWatcher(et2));
+        et3.addTextChangedListener(new GenericTextWatcher(et3));
+        et4.addTextChangedListener(new GenericTextWatcher(et4));
+        et5.addTextChangedListener(new GenericTextWatcher(et5));
+        et6.addTextChangedListener(new GenericTextWatcher(et6));
+
+        verifyButton = findViewById(R.id.verifyButtonId);
+
+        phoneNumber = getIntent().getStringExtra("phonenumber");
+
+        sendVerificationCode(phoneNumber);
+
+        auth = FirebaseAuth.getInstance();
+
+        progressBar = findViewById(R.id.progressbar);
+    }
 }

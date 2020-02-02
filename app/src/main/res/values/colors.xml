@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#5DBCD2</color>
-    <color name="colorPrimaryDark">#1e8ca1</color>
-    <color name="colorPrimaryLight">#92efff</color>
-    <color name="colorBackground">#F7F7F7</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="LightcolorPrimary">#5DBCD2</color>
+    <color name="LightcolorPrimaryDark">#1e8ca1</color>
+    <color name="LightcolorPrimaryLight">#92efff</color>
+    <color name="LightcolorBackground">#F7F7F7</color>
+    <color name="LightcolorAccent">#D81B60</color>
+    <color name="LighteditTextBackground">#000</color>
+
+
+    <color name="DarkcolorPrimary">#313131</color>
+    <color name="DarkcolorPrimaryDark">#080808</color>
+    <color name="DarkcolorPrimaryLight">#5a5a5a</color>
+    <color name="DarkcolorBackground">#212121</color>
+    <color name="DarkcolorAccent">#D81B60</color>
+    <color name="DarkeditTextBackground">#fff</color>
+
+    <color name="White">#fff</color>
+    <color name="Black">#000</color>
+
 </resources>
 

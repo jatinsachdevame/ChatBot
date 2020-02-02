@@ -1,9 +1,9 @@
 package com.example.chatbot.Settings;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import android.os.Bundle;
+import android.widget.Toolbar;
 
 import com.example.chatbot.R;
 
@@ -16,8 +16,8 @@ public class SettingsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         toolbar = findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Settings");
+        setActionBar(toolbar);
+        getActionBar().setTitle("Settings");
 
         if (findViewById(R.id.fragmentContainer) != null) {
             if (savedInstanceState!=null) return;
