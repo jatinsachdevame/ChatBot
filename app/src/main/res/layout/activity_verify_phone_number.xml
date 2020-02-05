@@ -17,7 +17,6 @@
         android:layout_marginRight="16dp"
         android:text="Verification"
         android:textAlignment="center"
-        android:textColor="#000"
         android:fontFamily="@font/playfair_display"
         />
 
@@ -31,7 +30,6 @@
 will be detect automatically but if it is not then you can add it manually too."
         android:fontFamily="@font/playfair_display"
         android:textSize="20dp"
-        android:textColor="#000"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:id="@+id/instruction"
