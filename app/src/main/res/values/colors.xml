@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="LightcolorPrimary">#5DBCD2</color>
-    <color name="LightcolorPrimaryDark">#1e8ca1</color>
-    <color name="LightcolorPrimaryLight">#92efff</color>
-    <color name="LightcolorBackground">#F7F7F7</color>
-    <color name="LightcolorAccent">#D81B60</color>
+    <color name="colorPrimary">#00BCD4</color>
+    <color name="colorPrimaryDark">#0097A7</color>
+    <color name="colorPrimaryLight">#B2EBF2</color>
+    <color name="LightcolorBackground">#E4DEDE</color>
+    <color name="LightcolorAccent">#03A9F4</color>
     <color name="LighteditTextBackground">#000</color>
 
-
-    <color name="DarkcolorPrimary">#313131</color>
-    <color name="DarkcolorPrimaryDark">#080808</color>
-    <color name="DarkcolorPrimaryLight">#5a5a5a</color>
     <color name="DarkcolorBackground">#212121</color>
-    <color name="DarkcolorAccent">#D81B60</color>
+    <color name="DarkcolorAccent">#03A9F4</color>
     <color name="DarkeditTextBackground">#fff</color>
+
+    <color name="lightActivityBG">#E7E0E0</color>
+    <color name="darkActivityBG">#000000</color>
 
     <color name="White">#fff</color>
     <color name="Black">#000</color>

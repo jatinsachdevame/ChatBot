@@ -2,24 +2,37 @@
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/LightcolorPrimary</item>
-        <item name="colorPrimaryDark">@color/LightcolorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/LightcolorAccent</item>
         <item name="android:textColor">#000</item>
         <item name="android:textColorPrimary">#000</item>
         <item name="actionMenuTextColor">#000</item>
-        <item name="android:statusBarColor">@color/LightcolorPrimaryDark</item>
+        <item name="android:statusBarColor">@color/colorPrimaryDark</item>
         <item name="editTextBackground">@color/LighteditTextBackground</item>
+        <item name="toolbarStyle">@style/Theme.AppCompat.Light.DarkActionBar</item>
+        <item name="activityBackground">@color/White</item>
     </style>
 
-    <style name="Dark_Theme" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="colorPrimary">@color/DarkcolorPrimary</item>
-        <item name="colorPrimaryDark">@color/DarkcolorPrimary</item>
+    <style name="Dark_Theme" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorAccent">@color/DarkcolorAccent</item>
         <item name="android:textColor">#fff</item>
         <item name="android:textColorPrimary">#fff</item>
-        <item name="android:statusBarColor">@color/DarkcolorPrimaryDark</item>
         <item name="editTextBackground">@color/DarkeditTextBackground</item>
+        <item name="android:actionBarTabTextStyle">@color/DarkeditTextBackground</item>
+        <item name="android:editTextBackground">@color/DarkeditTextBackground</item>
+        <item name="toolbarStyle">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
+        <item name="activityBackground">@color/Black</item>
+    </style>
+
+    <style name="Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+    <style name="toolbarFont">
+        <item name="android:fontFamily">@font/playfair_display</item>
     </style>
 
 </resources>
